@@ -1,0 +1,12 @@
+button {
+    background-color: white; /* Green */
+    border: 1px solid black;
+    padding: 5px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    box-shadow: 0 6px 8px 0 lightgray
+}
