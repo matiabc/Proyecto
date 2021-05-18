@@ -1,3 +1,26 @@
-<p>ver-nota works!</p>
 
-<!-- Mati aqui va el formulario-->
+<!-- aqui va el formulario-->
+
+<form action="/action_page.php">
+    <label for="titulo">Título:</label><br>
+    <textarea id="titulo" name="titulo_box" rows="1" cols="22">      </textarea>
+    <br>
+    
+
+    <p>Estado</p>
+    <input list="estados" name="estados_list" rows="1" cols="30">
+    <datalist id="estados">
+      <option value="En proceso">
+      <option value="Abierto">
+
+    </datalist><br><br>
+
+    <label for="descripcion">Descripción:</label><br>
+    <textarea id="descripcion" name="descripcion_box" rows="5" cols="22">
+    
+      </textarea>
+      <br><br>
+    
+      <button type="button">Actualizar</button>
+  </form>
+ 
