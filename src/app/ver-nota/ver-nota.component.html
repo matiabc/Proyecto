@@ -1,25 +1,31 @@
 
 <!-- aqui va el formulario-->
-
-<form action="/action_page.php">
-    <label for="titulo">Título:</label><br>
-    <textarea id="titulo" name="titulo_box" rows="1" cols="22">      </textarea>
-    <br>
-    
-    <p>Estado</p>
-    <input list="estados" name="estados_list" rows="1" cols="30">
-    <datalist id="estados">
-      <option value="En proceso">
-      <option value="Abierto">
-
-    </datalist><br><br>
-
-    <label for="descripcion">Descripción:</label><br>
-    <textarea id="descripcion" name="descripcion_box" rows="5" cols="22">
-    
-      </textarea>
-      <br><br>
-    
-      <button type="button">Actualizar</button>
-</form>
  
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" accept-charset="utf-8" novalidate>
+
+  <section>
+    Título
+    <p><input type="text" formControlName="nombre" size="40" required></p>
+
+    Estado
+    <p id ="Estado">
+      <input list="estados" name="estados_list" rows="3" cols="30">
+      <datalist id="estados">
+        <option value="En Proceso">
+        <option value="Abierto">
+        <option value="Cerrado">
+      </datalist>
+    </p>
+
+    Descripción 
+    <p> 
+      <textarea id="descripcion" name="descripcion_box" rows="5" cols="22"> </textarea>
+    </p>
+
+  </section>
+
+  <p id= "submits" >
+    <input type="submit" value="Actualizar" [disabled] = "formulario.invalid">
+  </p>
+
+</form>
