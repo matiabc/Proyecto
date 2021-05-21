@@ -10,3 +10,43 @@ button {
 button:hover {
     box-shadow: 0 6px 8px 0 lightgray
 }
+
+ul{
+    list-style-type: none;
+    padding-right: 5px;
+    padding-left: 0px;
+    
+}
+
+ul li{
+    background-color: white; /* Green */
+    border: 1px solid black;
+    border-radius: 2%;
+    
+}
+
+ul li span{
+    display: block;
+    overflow: hidden;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 100px;
+    font-size: 12px;
+}
+
+#titulo{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.column {
+    float: left;
+    width: 30%;
+}
+  
+/* Clear floats after the columns */
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}

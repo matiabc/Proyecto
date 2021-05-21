@@ -1,7 +1,41 @@
+<div class="rows">
+    <div class="column">
+        <ul *ngFor="let item of lista" >
+            <li>
+        
+                <span id= "titulo" > {{item.titulo}} </span>
+                <span> {{item.descripcion}} </span>
+            </li>
+        </ul>
+        
 
-<!--Aqui se muestras las notas en lista-->
+    </div>
+    <div class="column">
+        <ul *ngFor="let item of lista" >
+            <li>
+        
+                <span id= "titulo" > {{item.titulo}} </span>
+                <span> {{item.descripcion}} </span>
+            </li>
+        </ul>
+    
+    </div>
+    <div class="column">
+        <ul *ngFor="let item of lista" >
+            <li>
+        
+                <span id= "titulo" > {{item.titulo}} </span>
+                <span> {{item.descripcion}} </span>
+            </li>
+        </ul>
+    
+    
+    </div>
+
+</div>
 
 
+<!-- Boton Actualizar en el footer -->
 <footer>
     <button [routerLink]="['/vernota']" routerLinkActive="router-link-active" > + Adicionar </button>
 </footer>
