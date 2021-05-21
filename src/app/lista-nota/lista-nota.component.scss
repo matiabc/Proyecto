@@ -1,5 +1,5 @@
-button {
-    background-color: white; /* Green */
+.actualizar {
+    background-color: white; 
     border: 1px solid black;
     padding: 5px 50px;
     text-align: center;
@@ -18,20 +18,37 @@ ul{
     
 }
 
-ul li{
-    background-color: white; /* Green */
+.nota{
+    background-color: white;
     border: 1px solid black;
-    border-radius: 2%;
-    
+    padding : 0px;
+    width: 80%;
 }
 
-ul li span{
+.nota span{
+    text-align: left;
     display: block;
     overflow: hidden;
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 100px;
     font-size: 12px;
+}
+
+.delete{
+    background-color: white; 
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.delete:hover{
+    background-color: red;
+    color: white;
 }
 
 #titulo{
@@ -49,4 +66,27 @@ ul li span{
     content: "";
     display: table;
     clear: both;
+}
+
+#abierto{
+    border: 1px solid black;
+    padding : 0px;
+    width: 80%;
+    background-color: lightsalmon;
+    
+}
+#cerrado{
+
+    border: 1px solid black;
+    padding : 0px;
+    width: 80%;
+    background-color: mediumseagreen;
+
+}
+#en_proceso{
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    padding : 0px;
+    width: 80%;
+
 }

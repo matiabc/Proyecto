@@ -19,12 +19,26 @@ export class ListaNotaComponent implements OnInit {
     {titulo: "Chao", estado: "Cerrado", descripcion: "lorem ipsum"},
     {titulo: "Como estas?", estado: "En Proceso", descripcion: "lorem ipsum"}
   ]; 
-
   
+  abierto:Array<Nota> = [];
+  cerrado:Array<Nota> = [];
+  en_proceso:Array<Nota> = [];
+
 
   constructor() { }
 
   ngOnInit(): void {
+
+    this.abierto = this.lista.filter(
+      nota => nota.estado == "Abierto" );
+
+    this.cerrado = this.lista.filter(
+      nota => nota.estado == "Cerrado" );
+      
+    this.en_proceso = this.lista.filter(
+      nota => nota.estado == "En Proceso" );
+
+
   }
 
 }
