@@ -1,31 +1,44 @@
 <div class="rows">
     <div class="column">
-        <ul *ngFor="let item of lista" >
+        <ul *ngFor="let item of abierto" >
+
             <li>
-        
-                <span id= "titulo" > {{item.titulo}} </span>
-                <span> {{item.descripcion}} </span>
+                <button class="nota" id="abierto">
+                    <span id= "titulo" > {{item.titulo}} </span>
+                    <span> {{item.descripcion}} </span>
+                </button>
+                <button class="delete">
+                    X
+                </button>
             </li>
         </ul>
         
 
     </div>
     <div class="column">
-        <ul *ngFor="let item of lista" >
+        <ul *ngFor="let item of en_proceso" >
             <li>
-        
-                <span id= "titulo" > {{item.titulo}} </span>
-                <span> {{item.descripcion}} </span>
+                <button class="nota" id="en_proceso">
+                    <span id= "titulo" > {{item.titulo}} </span>
+                    <span> {{item.descripcion}} </span>
+                </button>
+                <button class="delete">
+                    X
+                </button>
             </li>
         </ul>
     
     </div>
     <div class="column">
-        <ul *ngFor="let item of lista" >
+        <ul *ngFor="let item of cerrado" >
             <li>
-        
-                <span id= "titulo" > {{item.titulo}} </span>
-                <span> {{item.descripcion}} </span>
+                <button class="nota" id="cerrado">
+                    <span id= "titulo" > {{item.titulo}} </span>
+                    <span> {{item.descripcion}} </span>
+                </button>
+                <button class="delete">
+                    X
+                </button>
             </li>
         </ul>
     
@@ -37,5 +50,5 @@
 
 <!-- Boton Actualizar en el footer -->
 <footer>
-    <button [routerLink]="['/vernota']" routerLinkActive="router-link-active" > + Adicionar </button>
+    <button class="actualizar" [routerLink]="['/vernota']" routerLinkActive="router-link-active" > + Adicionar </button>
 </footer>
