@@ -5,11 +5,11 @@
 
   <section>
     Título
-    <p><input type="text" formControlName="nombre" size="40" required></p>
+    <p><input type="text" formControlName="titulo" size="40" required></p>
 
     Estado
     <p id ="Estado">
-      <input list="estados" name="estados_list" rows="3" cols="30">
+      <input list="estados" formControlName="estado" rows="3" cols="30" required>
       <datalist id="estados">
         <option value="En Proceso">
         <option value="Abierto">
@@ -19,7 +19,7 @@
 
     Descripción 
     <p> 
-      <textarea id="descripcion" name="descripcion_box" rows="5" cols="22"> </textarea>
+      <textarea id="descripcion" formControlName="descripcion" rows="5" cols="22" required> </textarea>
     </p>
 
   </section>

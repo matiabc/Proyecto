@@ -1,5 +1,5 @@
 export interface Nota{
-    nombre: string;
+    titulo: string;
     estado: string;
     descripcion: string;
 

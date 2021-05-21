@@ -16,7 +16,7 @@ export class VerNotaComponent implements OnInit {
   constructor(public form:FormBuilder) { 
 
     this.formulario = this.form.group({
-      nombre:['', Validators.required],
+      titulo:['', Validators.required],
       estado:['', Validators.required],
       descripcion:['', Validators.required]
 
@@ -29,6 +29,7 @@ export class VerNotaComponent implements OnInit {
 
   onSubmit(){
     this.lista.push(this.formulario.value);
+    console.log(this.formulario.value);
   }
 
 }
