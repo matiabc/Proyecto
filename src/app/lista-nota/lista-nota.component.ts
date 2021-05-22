@@ -30,11 +30,22 @@ export class ListaNotaComponent implements OnInit {
           this.en_proceso.push(element);
         
       });
+      
 
     });
 
+
   }
 
-
+  eliminar(dato:Nota){
+    this.lista.push(dato);
+    console.log(this.lista);
+    this.servicio.eliminarNota(this.lista).subscribe(datos=>{
+    });
+    window.location.reload();
+  }
 
 }
+
+
+
