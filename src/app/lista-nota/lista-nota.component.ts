@@ -33,7 +33,6 @@ export class ListaNotaComponent implements OnInit {
 
     });
 
-
   }
 
 
