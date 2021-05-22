@@ -5,6 +5,21 @@
     $json = file_get_contents('php://input'); 
     $info = json_decode($json,true);
 
-    echo $info
+    $jsonData = file_get_contents('datos.json');
+
+    if($jsonData){
+        $archivo = fopen("datos.json", "w");
+        fwrite($archivo,$json);
+
+    } else{
+        $arrayData=json_decode($jsonData);
+        array_push($arrayData,$info);
+        $jsonData = json_encode($arrayData);
+              
+        $archivo = fopen("datosIniciado.json", "w");
+        fwrite($archivo,$jsonData); 
+
+    }
+
 
 ?>

@@ -25,15 +25,12 @@ export class VerNotaComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.servicio.consultarNotas().subscribe(datos =>{
-      this.lista = datos[0];
-
-      console.log(this.lista);
-    });
     
   }
 
   onSubmit(){
     this.lista.push(this.formulario.value);
+    this.servicio.guardarDatos(this.formulario.value).subscribe(datos=>{});
+    
   }
 }
