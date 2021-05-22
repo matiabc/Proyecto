@@ -21,29 +21,19 @@ export class ListaNotaComponent implements OnInit {
   ngOnInit(): void {
 
     this.servicio.consultarNotas().subscribe( datos =>{
-      this.lista = datos;
+      datos.forEach((element: Nota) => {
+        if(element.estado == "Abierto")
+          this.abierto.push(element);
+        if(element.estado == "Cerrado")
+          this.cerrado.push(element);
+        if(element.estado == "En Proceso")
+          this.en_proceso.push(element);
+        
+      });
 
-      console.log(this.lista);
-      console.log(this.lista[0].estado);
     });
 
-    this.abierto = this.lista.filter(
-      nota => nota.estado == "Abierto" );
-    
-    console.log("Abierto: ");
-    console.log(this.abierto);
 
-    this.cerrado = this.lista.filter(
-      nota => nota.estado == "Cerrado" );
-
-    console.log("Cerrado: ");
-    console.log(this.cerrado);
-      
-    this.en_proceso = this.lista.filter(
-      nota => nota.estado == "En Proceso" );
-
-    console.log("En Proceso: ");
-    console.log(this.en_proceso);
   }
 
 
