@@ -18,4 +18,8 @@ export class ServicioNotasService {
   guardarDatos(lista:Array<Nota>):Observable<any>{
     return this.http.post(`${this.url}guardar.php`, JSON.stringify(lista));
   }
+
+  eliminarNota(lista:Array<Nota>):Observable<any>{
+    return this.http.post(`${this.url}eliminar.php`, JSON.stringify(lista));
+  }
 }
