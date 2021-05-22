@@ -7,7 +7,7 @@
 
     $jsonData = file_get_contents('datos.json');
 
-    if($jsonData){
+    if(empty($jsonData)){
         $archivo = fopen("datos.json", "w");
         fwrite($archivo,$json);
 
@@ -16,7 +16,7 @@
         array_push($arrayData,$info);
         $jsonData = json_encode($arrayData);
               
-        $archivo = fopen("datosIniciado.json", "w");
+        $archivo = fopen("datos.json", "w");
         fwrite($archivo,$jsonData); 
 
     }
